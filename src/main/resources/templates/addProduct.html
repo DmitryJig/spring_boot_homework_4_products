@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Add product</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+</head>
+<body>
+<div class="container mt-3">
+    <h1>Add new product</h1>
+
+    <form method="post" th:action="@{/products/add}">
+        <input class="form-control mt-3" type="text" name="title" placeholder="Enter new product title"/>
+        <input class="form-control mt-3" type="number" name="cost" placeholder="Enter cost new product"/>
+        <button type="submit" class="btn btn-outline-primary mt-3">Create new product</button>
+    </form>
+    <a class="btn btn-outline-primary mt-3" th:href="@{/products}">Return to list products</a>
+</div>
+</body>
+</html>
